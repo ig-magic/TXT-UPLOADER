@@ -22,4 +22,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 10000
 
 # Start web server file
-CMD ["python", "web.py"]
+CMD ["gunicorn", "-b", "0.0.0.0:$PORT", "web:app"]
