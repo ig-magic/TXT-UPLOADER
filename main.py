@@ -57,7 +57,7 @@ async def show_random_emojis(message):
     return emoji_message
 
 # Define the owner's user ID
-OWNER_ID = 8535060154 # Replace with the actual owner's user ID
+OWNER_ID =  8587087864# Replace with the actual owner's user ID
 
 # Initialize the database instance globally
 # This will attempt to connect to MongoDB when the bot starts
@@ -67,7 +67,7 @@ except Exception as e:
     logging.error(f"Failed to initialize database: {e}")
     sys.exit(1) # Exit if database connection fails
 
-AUTH_CHANNEL = -1002752608747
+AUTH_CHANNEL = -1003681400118
 
 # Function to check if a user is authorized
 def is_authorized(user_id: int) -> bool:
@@ -123,11 +123,11 @@ async def sudo_command(bot: Client, message: Message):
 keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🇮🇳ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ🇮🇳" ,url=f"https://t.me/ItsPikachubot") ],
+                    InlineKeyboardButton("🇮🇳ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ🇮🇳" ,url=f"https://t.me/magicxbots") ],
                     [
-                    InlineKeyboardButton("🔔ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🔔" ,url="https://t.me/Medicoarmy") ],
+                    InlineKeyboardButton("🔔ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🔔" ,url="https://t.me/Magicxbots") ],
                     [
-                    InlineKeyboardButton("🦋ғᴏʟʟᴏᴡ ᴜs🦋" ,url="https://t.me/Medicoarmy")
+                    InlineKeyboardButton("🦋ғᴏʟʟᴏᴡ ᴜs🦋" ,url="https://t.me/Magicxbots")
                 ],
             ]
       )
