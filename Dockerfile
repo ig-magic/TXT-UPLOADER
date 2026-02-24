@@ -1,18 +1,25 @@
 FROM python:3.10-slim
 
-RUN apt-get update -y && apt-get upgrade -y \
-    && apt-get install -y --no-install-recommends \
-        gcc \
-        libffi-dev \
-        ffmpeg \
-        aria2 \
-        python3-pip \
+# Install system dependencies
+RUN apt-get update -y && apt-get install -y --no-install-recommends \
+    gcc \
+    libffi-dev \
+    ffmpeg \
+    aria2 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+# Set working directory
 WORKDIR /app
+
+# Copy files
 COPY . /app
 
-RUN pip install -r requirements.txt
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python", "main.py"]
+# Expose port (optional but clean practice)
+EXPOSE 10000
+
+# Start web server file
+CMD ["python", "web.py"]
