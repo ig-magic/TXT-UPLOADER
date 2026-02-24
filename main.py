@@ -913,10 +913,3 @@ async def upload(bot: Client, m: Message):
                        f"╰────────────────\n\n"
                        f"<b>ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ :</b> {CR}")
 
-def start_bot():
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    bot.run()
-
-if __name__ == "__main__":
-    start_bot()
