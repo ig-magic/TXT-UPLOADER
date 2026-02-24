@@ -913,8 +913,8 @@ async def upload(bot: Client, m: Message):
                        f"╰────────────────\n\n"
                        f"<b>ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ :</b> {CR}")
 
-bot.run()
-# The main() function is not defined in your original script, so I've commented it out.
-# If you have an async main function, ensure it's properly called.
-# if __name__ == "__main__":
-#     asyncio.run(main())
+def start_bot():
+    bot.run()
+
+if __name__ == "__main__":
+    start_bot()
